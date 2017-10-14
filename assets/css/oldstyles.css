@@ -1,0 +1,404 @@
+
+/* Import reset CSS */
+@import url("reset.css");
+
+
+
+/* -------- General styles -------- */
+body {
+  color: #727272; /* #777777 doesn't meet WCAG 2.0 contrast requirements */
+  font-family: 'Karla', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background-image: url("../images/cork-wallet.png");
+  background-repeat: repeat;
+}
+
+h1 {
+  color: #367C79; /* #4aaaa5 doesn't meet WCAG 2.0 contrast requirements */
+  font-family: 'Raleway', 'Georgia', Times, Times New Roman, serif;
+
+  font-size: 20px;
+}
+
+h2 {
+  color: #367C79; /* #4aaaa5 doesn't meet WCAG 2.0 contrast requirements */
+  font-family: 'Raleway', 'Georgia', Times, Times New Roman, serif;
+
+  font-size: 18px;
+}
+
+hr {
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.sub-text {
+  font-size: 12px;
+}
+
+a {
+  color: #0000b3;
+}
+
+a:visited {
+
+}
+/* -------------------------------- */
+
+
+
+/* ------------ Header ------------ */
+#headerbar {
+  display: inline-block;
+  width: 100%;
+  clear: both;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #cccccc;
+  margin-bottom: 30px;
+  position: fixed;
+  z-index: 5;
+}
+
+nav {
+  float: right;
+  font-family: 'Karla', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  padding:20px;
+}
+
+nav a:hover, nav a:focus {
+  /* color: #367C79; */
+  /*font-weight: bold;*/
+  background-color: #367C79;
+  color: white;
+}
+
+nav a {
+  display: inline-block;
+}
+
+nav a::first-letter {
+  border-bottom: 1px solid #0000b3;
+  padding-bottom: 1px;
+}
+
+#logo {
+  float: left;
+  background-color: #367C79;
+  color: white;
+  font-size: 18px;
+  font-family: 'Raleway', 'Georgia', Times, Times New Roman, serif;
+  padding:20px;
+  text-shadow: 1px 1px #333333;
+}
+
+/* -------------------------------- */
+
+
+
+/* ------- Social media box ------- */
+
+#social-media {
+  width: 270px;
+  float: right;
+  background-color: #FFFFFF;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/*@media (max-width: 799px) {
+  #social-media {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}*/
+
+h2.social-media {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr.social-media {
+  max-width: 94%;
+}
+
+.sm-icon {
+  padding: 0px;
+  margin: 0px;
+  width: 31%;
+  height: auto;
+}
+
+.sm-icon:hover {
+  width: 35%;
+  margin: -2%;
+}
+/* -------------------------------- */
+
+
+
+/* ---------- Main area ----------- */
+#main-content {
+  width: 650px;
+  float: left;
+  background-color: #FFFFFF;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  padding-top: 0;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+#wrapper, #headerwrapper { /* Use the same margins for the header and body content so they align */
+  margin: 0 auto;
+  width: 960px;
+  clear: both;
+}
+
+#wrapper {
+  display: inline-block;
+  padding-bottom: 60px;
+  text-align: left;
+  margin-top: 100px;
+}
+
+/* -------------------------------- */
+
+
+
+/* ----------- Biography ---------- */
+.bio-img {
+  width: 300px;
+  float: left;
+  margin-right: 12px;
+}
+
+/* -------------------------------- */
+
+
+
+/* --------- Form styles ---------- */
+form {
+  width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-family: 'Karla', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  resize: none;
+}
+
+button[type=submit] {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+button[type=submit]:hover, button[type=submit]:focus {
+  color: white;
+  background-color: #367C79;
+}
+
+.required:before {
+  position: absolute;
+  margin-left: -10px;
+  content: "* ";
+  color: #C00000;
+}
+
+/* Placeholder text styling snipped from https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research */
+-webkit-input-placeholder {
+  color: #767676;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #767676;
+  opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19 */
+  color: #767676;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #767676;
+  opacity: 1;
+}
+/* -------------------------------- */
+
+
+
+/* ---=--- Portfolio styles ------- */
+
+#portfolio-wrapper {
+  margin: -5px;
+}
+
+.portfolio-item {
+  float: left;
+  width: 279px;
+  margin: 15px;
+  position: relative;
+}
+
+.portfolio-filler { /* 0-height boxes for last row spacing */
+  display: none;
+}
+
+.portfolio-item-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.portfolio-item-label {
+  position: absolute;
+  top: 72%;
+  width: calc(100% - 20px);
+  background: #367C79;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 4%;
+  margin: 0;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* -------------------------------- */
+
+
+/* -------- Footer styling -------- */
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+  background-color: #666666;
+  color: #FDFDFD;
+  border-top: 10px solid #367C79;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+html, body {
+  height: 100%;
+}
+
+#page-wrapper {
+  min-height: 100%;
+  position: relative;
+  text-align: center;
+}
+/* -------------------------------- */
+
+
+/* Requisite media queries, per assignment */
+@media screen and (max-width: 980px) {
+
+    #wrapper, #headerwrapper {
+    width: 730px;
+  }
+
+  #main-content {
+    width: 420px;
+  }
+
+  .bio-img {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .portfolio-item {
+    width: 100%;
+    margin: 15px 0px;
+  }
+
+  #portfolio-wrapper {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  #wrapper, #headerwrapper, #main-content {
+    width: 95%;
+  }
+
+  #main-content {
+    width: 100%;
+  }
+
+  #social-media {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    float: none;
+    clear: both;
+  }
+
+  .bio-img {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .portfolio-item {
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  #portfolio-wrapper {
+    margin: -5px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+
+  #headerwrapper {
+    width: 100%;
+  }
+
+  #wrapper {
+    width: 96%;
+    margin-top: 0px;
+  }
+
+  .bio-img {
+    width: 100%;
+  }
+
+  #logo {
+    width: 100%;
+    padding: 20px 0px;
+    float: none;
+  }
+
+  nav {
+    width: 100%;
+    padding: 14px 0px;
+    float: none;
+  }
+
+  .portfolio-item {
+    width: 100%;
+    margin: 15px 0px;
+  }
+
+  #portfolio-wrapper {
+    margin: 10px;
+  }
+
+  #headerbar {
+    position: static;
+  }
+}
